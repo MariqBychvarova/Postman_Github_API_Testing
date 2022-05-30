@@ -1,0 +1,359 @@
+{
+	"info": {
+		"_postman_id": "004bf26e-313f-4c4b-98c6-c498e8976c42",
+		"name": "API Testing Exercise",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "Get Issue From Repo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.github.com/repos/MariqBychvarova/QA-Automation-Project-Collections/issues/1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"repos",
+								"MariqBychvarova",
+								"QA-Automation-Project-Collections",
+								"issues",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Issues From Repo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.github.com/repos/MariqBychvarova/QA-Automation-Project-Collections/issues",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"repos",
+								"MariqBychvarova",
+								"QA-Automation-Project-Collections",
+								"issues"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Comments For Issue",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.github.com/repos/MariqBychvarova/QA-Automation-Project-Collections/issues/1/comments",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"repos",
+								"MariqBychvarova",
+								"QA-Automation-Project-Collections",
+								"issues",
+								"1",
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Spefic Comment For Issue",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.github.com/repos/MariqBychvarova/QA-Automation-Project-Collections/issues/comments/1125746812",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"repos",
+								"MariqBychvarova",
+								"QA-Automation-Project-Collections",
+								"issues",
+								"comments",
+								"1125746812"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "Create new Issue",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "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",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "MariqBychvarova",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"Това е второто ми issue!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.github.com/repos/MariqBychvarova/QA-Automation-Project-Collections/issues",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"repos",
+								"MariqBychvarova",
+								"QA-Automation-Project-Collections",
+								"issues"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create New Comment For Issue",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "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",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "MariqBychvarova",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"My comment\",\r\n    \"body\" : \"Some comment\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.github.com/repos/MariqBychvarova/QA-Automation-Project-Collections/issues/2/comments",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"repos",
+								"MariqBychvarova",
+								"QA-Automation-Project-Collections",
+								"issues",
+								"2",
+								"comments"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PATCH",
+			"item": [
+				{
+					"name": "Modify Specific Issue",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "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",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "MariqBychvarova",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Втори проблем\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.github.com/repos/MariqBychvarova/QA-Automation-Project-Collections/issues/2",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"repos",
+								"MariqBychvarova",
+								"QA-Automation-Project-Collections",
+								"issues",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modify Existing Comment",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "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",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "MariqBychvarova",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" :\"Some title\",\r\n    \"body\" : \"New content\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.github.com/repos/MariqBychvarova/QA-Automation-Project-Collections/issues/comments/1125780628",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"repos",
+								"MariqBychvarova",
+								"QA-Automation-Project-Collections",
+								"issues",
+								"comments",
+								"1125780628"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DELETE",
+			"item": [
+				{
+					"name": "Delete Existing Comment",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "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",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "MariqBychvarova",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://api.github.com/repos/MariqBychvarova/QA-Automation-Project-Collections/issues/comments/1125780628",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"repos",
+								"MariqBychvarova",
+								"QA-Automation-Project-Collections",
+								"issues",
+								"comments",
+								"1125780628"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
